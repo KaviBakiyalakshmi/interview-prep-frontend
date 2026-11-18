@@ -73,19 +73,4 @@ Step E: Admin. Register on the live site with the email you put in ADMIN_EMAIL t
 
 Step F: Install on phone. Open the site in Chrome on Android, menu > Install app / Add to Home screen.
 
-## 6. Launch plan (first 4 weeks)
-Week 1: Deploy. Add 30+ more scenario questions through the Admin page (aim for 100 total).
-Week 2: Post one LinkedIn / Instagram Reel per day: "Today's question: [scenario]". End with the link.
-        Use the real question of the day from your own app, so followers can answer it without signing up.
-Week 3: Ask 10 developer friends to try it and send feedback. Fix what confuses them. Ask them to share
-        their score with the Share button.
-Week 4: Post "I built this in public" with real numbers: users, quizzes taken, most missed question.
-Track: signups, quizzes per user, how many come back the next day.
 
-## 7. Money later (only after people use it)
-Free: daily question, 10-question quizzes. Paid ideas: unlimited quizzes, company-wise question packs,
-mock interviews with a timer, resume review. Add Razorpay when you have repeat users.
-
-## 8. Good next features
-Timer mode, explanation voting, "report a wrong question", email reminder to keep the streak,
-coding questions, Python and DevOps topics, more languages for explanations.
