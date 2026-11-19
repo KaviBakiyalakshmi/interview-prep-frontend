@@ -84,7 +84,21 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <footer className="site-footer">{APP_NAME}: practice real interview questions, one day at a time.</footer>
+      <footer className="site-footer">
+        <a
+          className="channel-link"
+          href="https://www.youtube.com/channel/UC8tfJJCzJzOGTn5VJpKHt_g"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="/kavi-codehub.png" alt="Kavi_Codehub Study Coding channel logo" />
+          <span>
+            <strong>Study along with Kavi</strong>
+            <small>Kavi_Codehub on YouTube</small>
+          </span>
+        </a>
+        <p>{APP_NAME}: practice real interview questions, one day at a time.</p>
+      </footer>
     </>
   );
 }

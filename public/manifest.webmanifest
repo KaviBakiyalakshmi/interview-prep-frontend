@@ -1,12 +1,12 @@
 {
   "name": "InterviewPrep",
   "short_name": "InterviewPrep",
-  "description": "Java and Spring Boot interview practice with real scenario questions.",
+  "description": "Study along with Kavi: practice Java and Spring Boot interview questions.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#4f46e5",
+  "background_color": "#241c58",
+  "theme_color": "#6254d8",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
