@@ -1,19 +1,19 @@
 :root {
   --bg: #241c58;
-  --surface: #c2410c;
+  --surface: #ffffff;
   --text: #ffffff;
   --muted: #e8e3ff;
-  --border: #ffad76;
-  --primary: #ffd32f;
-  --primary-text: #27194f;
-  --accent: #ffd32f;
-  --card-text: #ffffff;
+  --border: #d2deed;
+  --primary: #2563eb;
+  --primary-text: #ffffff;
+  --accent: #2563eb;
+  --card-text: #102a43;
   --good: #14532d;
   --good-bg: #bbf7d0;
   --bad: #991b1b;
   --bad-bg: #fee2e2;
-  --radius: 18px;
-  --shadow: 0 8px 22px rgba(15, 10, 52, 0.22);
+  --radius: 16px;
+  --shadow: 0 4px 14px rgba(15, 10, 52, 0.16);
   color-scheme: dark;
 }
 
@@ -52,16 +52,17 @@ p { margin: 0 0 0.75rem; }
 .stack > * + * { margin-top: 1rem; }
 
 /* header */
-.site-header { background: rgba(36, 28, 88, 0.94); border-bottom: 1px solid rgba(255, 211, 47, 0.45); position: sticky; top: 0; z-index: 10; }
+.site-header { background: rgba(36, 28, 88, 0.96); border-bottom: 1px solid rgba(255, 255, 255, 0.2); position: sticky; top: 0; z-index: 10; }
 .site-header .inner { max-width: 880px; margin: 0 auto; padding: 0.6rem 1rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .brand { font-weight: 800; font-size: 1.15rem; color: var(--text); }
-.brand span { color: var(--primary); }
+.brand span { color: #bfdbfe; }
 .nav { display: flex; gap: 0.25rem; flex-wrap: wrap; flex: 1; }
-.nav a { padding: 0.35rem 0.65rem; border-radius: 8px; color: var(--muted); font-weight: 500; }
-.nav a.active, .nav a:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); text-decoration: none; }
+.nav a { padding: 0.35rem 0.65rem; border-radius: 8px; color: #e0e7ff; font-weight: 500; }
+.nav a.active, .nav a:hover { background: rgba(255, 255, 255, 0.12); color: #ffffff; text-decoration: none; }
+.site-header .btn.ghost { color: #ffffff; border-color: #bfdbfe; }
 .site-footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 1.5rem 1rem 2.5rem; }
 .site-footer p { margin: 0.75rem 0 0; }
-.channel-link { display: inline-flex; align-items: center; gap: 0.75rem; color: var(--text); text-align: left; }
+.channel-link { display: inline-flex; align-items: center; gap: 0.75rem; color: #ffffff; text-align: left; }
 .channel-link:hover { color: var(--primary); text-decoration: none; }
 .channel-link img { width: 58px; height: 58px; object-fit: contain; border-radius: 10px; background: #fff; }
 .channel-link span, .channel-link small { display: block; }
@@ -69,13 +70,13 @@ p { margin: 0 0 0.75rem; }
 
 /* cards + forms */
 .card { background: var(--surface); color: var(--card-text); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); margin-bottom: 0.9rem; }
-.card .muted { color: #ffffff; }
-.card a { color: var(--card-text); text-decoration: underline; }
+.card .muted { color: #52657a; }
+.card a { color: #1d4ed8; text-decoration: underline; }
 .card a.btn { text-decoration: none; }
-.card .btn.ghost { color: var(--card-text); border-color: var(--card-text); }
-.card .chip { color: var(--card-text); border-color: var(--card-text); }
+.card .btn.ghost { color: var(--primary); border-color: var(--primary); }
+.card .chip { color: var(--primary); border-color: var(--primary); }
 .hero { padding: 1.5rem 0 1rem; }
-.hero h1 { color: var(--primary); }
+.hero h1 { color: #ffffff; }
 .hero p { color: var(--muted); font-size: 1.05rem; max-width: 640px; }
 label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem; }
 input, select, textarea {
@@ -111,18 +112,18 @@ textarea { min-height: 90px; resize: vertical; }
 .options { list-style: none; padding: 0; margin: 0 0 0.75rem; display: grid; gap: 0.5rem; }
 .option {
   display: flex; gap: 0.65rem; align-items: flex-start; text-align: left; width: 100%;
-  padding: 0.65rem 0.8rem; border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 10px;
-  background: rgba(0, 0, 0, 0.12); color: var(--card-text); font: inherit;
+  padding: 0.65rem 0.8rem; border: 1px solid var(--border); border-radius: 10px;
+  background: #ffffff; color: var(--card-text); font: inherit;
 }
 button.option { cursor: pointer; }
 button.option:hover:not(:disabled) { border-color: var(--primary); }
 .option.selected { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary); }
 .option.correct { background: #17653d; border-color: #82e1a9; color: #ffffff; }
 .option.wrong { background: #8e2638; border-color: #ff9ca8; color: #ffffff; }
-.letter { flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; background: var(--bg); border: 1px solid var(--border); }
+.letter { flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; background: var(--bg); color: #ffffff; border: 1px solid var(--border); }
 .tag { margin-left: auto; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
 
-.explanation { background: var(--bg); color: var(--text); border-radius: 10px; padding: 0.75rem; margin-top: 0.5rem; }
+.explanation { background: #eff6ff; color: var(--card-text); border-radius: 10px; padding: 0.75rem; margin-top: 0.5rem; }
 .tabs { display: flex; gap: 0.35rem; margin-bottom: 0.5rem; }
 .tab { border: 1px solid var(--border); background: transparent; color: var(--muted); border-radius: 999px; padding: 0.15rem 0.7rem; font: inherit; font-size: 0.8rem; cursor: pointer; }
 .tab.active { background: var(--primary); border-color: var(--primary); color: var(--primary-text); }
@@ -157,7 +158,7 @@ th { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
 .question p:last-child { margin-bottom: 0; }
 pre.code {
   margin: 0.5rem 0; padding: 0.75rem; overflow-x: auto; border-radius: 8px;
-  background: var(--bg); border: 1px solid var(--border); color: var(--text);
+  background: #eff6ff; border: 1px solid var(--border); color: var(--card-text);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85rem; line-height: 1.45;
 }
 pre.code code { font-family: inherit; white-space: pre; }
