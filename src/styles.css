@@ -1,13 +1,13 @@
 :root {
   --bg: #241c58;
-  --surface: #f4772b;
+  --surface: #c2410c;
   --text: #ffffff;
   --muted: #e8e3ff;
   --border: #ffad76;
   --primary: #ffd32f;
   --primary-text: #27194f;
   --accent: #ffd32f;
-  --card-text: #27194f;
+  --card-text: #ffffff;
   --good: #14532d;
   --good-bg: #bbf7d0;
   --bad: #991b1b;
@@ -69,7 +69,7 @@ p { margin: 0 0 0.75rem; }
 
 /* cards + forms */
 .card { background: var(--surface); color: var(--card-text); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); margin-bottom: 0.9rem; }
-.card .muted { color: #3b2448; }
+.card .muted { color: #ffffff; }
 .card a { color: var(--card-text); text-decoration: underline; }
 .card a.btn { text-decoration: none; }
 .card .btn.ghost { color: var(--card-text); border-color: var(--card-text); }
@@ -111,8 +111,8 @@ textarea { min-height: 90px; resize: vertical; }
 .options { list-style: none; padding: 0; margin: 0 0 0.75rem; display: grid; gap: 0.5rem; }
 .option {
   display: flex; gap: 0.65rem; align-items: flex-start; text-align: left; width: 100%;
-  padding: 0.65rem 0.8rem; border: 1px solid rgba(39, 25, 79, 0.3); border-radius: 10px;
-  background: rgba(255, 255, 255, 0.25); color: var(--card-text); font: inherit;
+  padding: 0.65rem 0.8rem; border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 10px;
+  background: rgba(0, 0, 0, 0.12); color: var(--card-text); font: inherit;
 }
 button.option { cursor: pointer; }
 button.option:hover:not(:disabled) { border-color: var(--primary); }
