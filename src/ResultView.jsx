@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BookmarkButton, Explanation } from './components.jsx';
+import { BookmarkButton, Explanation, QuestionText } from './components.jsx';
 import { useBookmarks } from './hooks.js';
 import { APP_NAME } from './config.js';
 
@@ -80,7 +80,7 @@ export default function ResultView({ result, onRetry }) {
             <span className="muted small-text">Question {result.results.indexOf(r) + 1}</span>
             <BookmarkButton active={ids.has(r.questionId)} onClick={() => toggle(r.questionId)} />
           </div>
-          <h3 className="question">{r.text}</h3>
+          <QuestionText text={r.text} />
           <ul className="options static">
             {r.options.map((opt, i) => {
               let cls = 'option';

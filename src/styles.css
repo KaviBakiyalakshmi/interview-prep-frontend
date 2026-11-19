@@ -156,3 +156,12 @@ th { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
 
 /* quiz question number pills */
 .tab.saved-dot { border-color: var(--primary); color: var(--primary); }
+
+.question p { margin: 0 0 0.6rem; white-space: pre-line; }
+.question p:last-child { margin-bottom: 0; }
+pre.code {
+  margin: 0.5rem 0; padding: 0.75rem; overflow-x: auto; border-radius: 8px;
+  background: var(--bg); border: 1px solid var(--border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85rem; line-height: 1.45;
+}
+pre.code code { font-family: inherit; white-space: pre; }

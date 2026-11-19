@@ -54,6 +54,7 @@ export default function StudyPage() {
               <option value="">Any</option>
               <option value="CONCEPT">Concept</option>
               <option value="SCENARIO">Scenario</option>
+              <option value="CODING">Coding (what happens?)</option>
             </select>
           </div>
           <div className="field">

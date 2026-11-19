@@ -67,6 +67,13 @@ export default function AdminPage() {
     }
   }
 
+  function onFile(e) {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    file.text().then(setBulk).catch(() => setError('Could not read that file.'));
+    e.target.value = '';
+  }
+
   async function addBulk(e) {
     e.preventDefault();
     setBusy(true);
@@ -165,6 +172,12 @@ export default function AdminPage() {
 
       <form className="card" onSubmit={addBulk}>
         <h2>Bulk upload (JSON array)</h2>
+        <p className="muted small-text">
+          Choose a .json file or paste a JSON array below. Upload each file only once to avoid duplicate questions.
+        </p>
+        <div className="field">
+          <input type="file" accept=".json,application/json" onChange={onFile} />
+        </div>
         <div className="field">
           <textarea style={{ minHeight: 160, fontFamily: 'monospace' }} value={bulk} onChange={(e) => setBulk(e.target.value)} placeholder={SAMPLE_BULK} required />
         </div>

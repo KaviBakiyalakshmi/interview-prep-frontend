@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { api } from '../api.js';
 import { useAuth } from '../auth.jsx';
-import { ErrorMessage, QuestionBadges } from '../components.jsx';
+import { ErrorMessage, QuestionBadges, QuestionText } from '../components.jsx';
 import ResultView from '../ResultView.jsx';
 
 export default function QuizPage() {
@@ -112,7 +112,7 @@ export default function QuizPage() {
 
         <section className="card">
           <QuestionBadges q={q} />
-          <h3 className="question">{q.text}</h3>
+          <QuestionText text={q.text} />
           <div className="options">
             {q.options.map((opt, i) => (
               <button
@@ -184,6 +184,7 @@ export default function QuizPage() {
               <option value="">Any</option>
               <option value="CONCEPT">Concept</option>
               <option value="SCENARIO">Scenario (real-world)</option>
+              <option value="CODING">Coding (what happens?)</option>
             </select>
           </div>
           <div className="field">

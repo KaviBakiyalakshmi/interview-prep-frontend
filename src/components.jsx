@@ -4,6 +4,32 @@ import { useAuth } from './auth.jsx';
 
 export const levelLabel = (level) => ({ JUNIOR: '0-2 yrs', MID: '2-5 yrs', SENIOR: '5+ yrs' }[level] || level);
 
+export function QuestionText({ text }) {
+  const parts = [];
+  const re = /```[a-zA-Z]*\n([\s\S]*?)```/g;
+  let last = 0;
+  let match;
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > last) parts.push({ code: false, value: text.slice(last, match.index) });
+    parts.push({ code: true, value: match[1].replace(/\n$/, '') });
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) parts.push({ code: false, value: text.slice(last) });
+  return (
+    <div className="question">
+      {parts.map((part, i) =>
+        part.code ? (
+          <pre key={i} className="code">
+            <code>{part.value}</code>
+          </pre>
+        ) : part.value.trim() ? (
+          <p key={i}>{part.value.trim()}</p>
+        ) : null
+      )}
+    </div>
+  );
+}
+
 export function Spinner({ text = 'Loading...' }) {
   return <div className="center muted">{text}</div>;
 }
@@ -80,7 +106,7 @@ export function StudyCard({ q, bookmarked, onToggle }) {
         <QuestionBadges q={q} />
         {onToggle && <BookmarkButton active={bookmarked} onClick={() => onToggle(q.id)} />}
       </div>
-      <h3 className="question">{q.text}</h3>
+      <QuestionText text={q.text} />
       <ul className="options static">
         {q.options.map((opt, i) => (
           <li key={i} className={revealed && i === q.correctIndex ? 'option correct' : 'option'}>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { api } from '../api.js';
 import { useAuth } from '../auth.jsx';
 import { TAGLINE } from '../config.js';
-import { Badge, ErrorMessage, Explanation, QuestionBadges } from '../components.jsx';
+import { Badge, ErrorMessage, Explanation, QuestionBadges, QuestionText } from '../components.jsx';
 
 function DailyQuestion() {
   const [q, setQ] = useState(null);
@@ -43,7 +43,7 @@ function DailyQuestion() {
         <Badge tone="accent">same for everyone</Badge>
       </div>
       <QuestionBadges q={q} />
-      <h3 className="question">{q.text}</h3>
+      <QuestionText text={q.text} />
       <div className="options">
         {q.options.map((opt, i) => (
           <button key={i} type="button" className={cls(i)} onClick={() => choose(i)} disabled={!!result}>
